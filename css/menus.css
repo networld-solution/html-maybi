@@ -125,10 +125,12 @@
     padding: 1em 0.7em;
     position: absolute;
     inset: 0 auto auto 0;
-    transform: translate3d(0, 4.2em, 0);
+    transform: translate3d(0, 4.1em, 0);
     min-width: 16em;
     max-height: 30em;
     overflow-y: scroll;
+    border-radius: 0.5em;
+    box-shadow: 0 0 5em 0 rgba(0,0,0,.1);
 }
 
 .search-category__dropdown > li{
@@ -138,6 +140,10 @@
     padding: 0.3em 0.5em 0.3em 1em;
     margin-bottom: 0.2em;
     transition: 0.3s;
+}
+
+.search-category__dropdown > li.active{
+    padding-left: 0.3em;
 }
 
 .search-category__dropdown > li.active, .search-category__dropdown > li:hover{
