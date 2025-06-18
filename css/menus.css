@@ -1,0 +1,120 @@
+/* ----------- HEADER TOP ----------- */
+.header-info-bar{
+    background-color: var(--light-dark);
+    font-size: 0.652vw;
+    padding: 1em 0;
+    
+}
+
+.header-top-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header-logo{
+    width: 14.5em;
+    height: 4.2em;
+}
+
+.header-logo__img{
+    width: 100%;
+    height: 100%;
+}
+
+.header-support{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.652vw;
+    gap:1em;
+}
+
+.header-support__icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width:4.2em;
+    height: 4.2em;
+    width: 4.2em;
+}
+.header-support__icon>svg{
+    width: 100%;
+    height: 100%;
+}
+.header-support__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+.header-support__content>h6{
+    margin: 0;
+    font-size: 1.3em;
+}
+
+.header-search{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4.2em;
+    width: 60em;
+}
+
+.header-search__form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.652vw;
+    height: 100%;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 1em;
+}
+
+.search-category{
+    width: 27%;    
+    height: 4.2em;
+    padding-left: 2em;
+    position: relative;
+}
+
+.search-category::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 0.1em;
+    height: 2em;
+    background-color: rgba(187,187,187,.68);
+}
+
+.search-category__title{
+    font-size: 1.3em;
+    width: 100%;
+    height: 100%;
+    position: static;
+    background-color: transparent;    
+    display: flex;
+    align-items: center;
+}
+
+.search-category__title::after{
+    border: 0;
+    content: "\ea4e";
+    font-size: 1em;
+    margin-left: 0.3em;
+    margin-top: 0;
+    opacity: .5;
+    vertical-align: middle;
+    font-weight: 900;
+    font-family: remixicon!important;
+}
+
+
+.search-category__dropdown{
+    display: none;
+}

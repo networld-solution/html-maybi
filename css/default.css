@@ -5,12 +5,14 @@
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
+    scrollbar-color: rgba(223, 223, 223, .9) rgba(255, 255, 255, 0);
+    scrollbar-width: thin;
 }
 
 :root {
     --red: #950505;
     --black: #373737;
-    --white: #fff;
+    --white: #ffffff;
     --pink: #ea84ab;
     --pink-hover: #dd0071;
     --primary: rgb(91, 197, 242);
