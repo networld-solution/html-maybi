@@ -19,7 +19,7 @@
                     <a class="header-logo" href="#" title="Maybi">                       
                         <img class="header-logo__img" width="150" height="42" src="../img/logo.webp" alt="Maybi Ecommerce Logo"> 
                     </a>  
-                    <div class="header-support border">
+                    <div class="header-support">
                         <div class="header-support__icon">
                             <svg><use xlink:href="#icon-support"></use></svg>
                         </div>                        
@@ -30,28 +30,28 @@
                     </div>
                     <div class="header-search">
                         <form class="header-search__form">                            
-                            <div class="search-category show">
-                                <div class="search-category__title" id="search-cate">
+                            <div class="search-category">
+                                <div class="search-category__title" id="search-cate" data-value="all">
                                     Tất cả
                                 </div>
                                 <ul class="search-category__dropdown">                                    
-                                    <li class="active">Tất cả</li>
+                                    <li data-value="all" class="active">Tất cả</li>
                                     <li class="group">Đầm</li>
-                                    <li>Đầm 2 dây</li>
-                                    <li>Đầm thun</li>
-                                    <li>Đầm ôm</li>
-                                    <li>Đầm xoè</li> 
-                                    <li>Đầm suông</li>
-                                    <li>Đầm hoạ tiết</li>
+                                    <li data-value="1">Đầm 2 dây</li>
+                                    <li data-value="2">Đầm thun</li>
+                                    <li data-value="3">Đầm ôm</li>
+                                    <li data-value="4">Đầm xoè</li> 
+                                    <li data-value="5">Đầm suông</li>
+                                    <li data-value="6">Đầm hoạ tiết</li>
                                     <li class="group">Áo</li>
-                                    <li>Croptop kiểu</li>
-                                    <li>Croptop thun</li>
-                                    <li>Áo sơ mi</li>
-                                    <li>Áo khoác</li>
-                                    <li>Áo 2 dây</li>                                  
+                                    <li data-value="7">Croptop kiểu</li>
+                                    <li data-value="8">Croptop thun</li>
+                                    <li data-value="9">Áo sơ mi</li>
+                                    <li data-value="10">Áo khoác</li>
+                                    <li data-value="11">Áo 2 dây</li>                                  
                                 </ul>
                             </div> 
-                            <input type="text" class="header-search__input" name="q" value="" placeholder="Bạn tìm gì">
+                            <input type="text" class="header-search__input border" name="q" value="" placeholder="Bạn tìm gì...">
                             <button type="button" class="header-search__btn">
                                 <i class="ri-search-2-line"></i>
                             </button>                                                        
@@ -60,7 +60,49 @@
                 </div>
             </div>
         </div>
-        <div class="header-wrapper"> nav </div>
+        <div class="bg-white">
+            <div class="container90 border">
+                <div class="header-navbars">
+                    <div class="cate-menus border">
+                        <div class="cate-menus__label">
+                            <i class="ri-menu-fill"></i>
+                            <span>Danh mục</span>
+                            <i class="cate-menus__icon ri-arrow-down-s-line"></i>                   
+                        </div>
+                        <div class="cate-menus__items border">   
+                            <ul class="cate-menus__nav">                       
+                                <li class="mega-menus border">
+                                    <a href="#" title="Chương trình hot">
+                                        <i class="ri-arrow-right-line"></i>
+                                        <span>Chương Trình HOT</span>
+                                        <span class="mega-menu__icon">
+                                            <i class="ri-arrow-right-s-line"></i>
+                                        </span>
+                                    </a>
+                                    <div class="mega-menus__nav">
+                                        <h3 class="mega-menus__title">Chương Trình HOT</h3>
+                                        <div class="mega-menus__items">
+                                            <a href="#" title="">
+                                                <figure class="mega-menus__item">
+                                                    <img class="mega-menus__img" width="50" height="50" src="../img/flash-sale.png" alt="Flash Sale">
+                                                </figure>
+                                                Flash Sale giảm 30%
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="border">
+                                    <a href="#" title="Đầm">
+                                        <i class="ri-arrow-right-line"></i>
+                                        <span>Đầm</span>
+                                    </a>                                    
+                                </li>   
+                            </ul>                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>    
 
     <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -72,9 +114,9 @@
                 <path d="M20.35 5.3c1.41 1.87 2.15 4.1 2.15 6.45 0 2.35-.74 4.58-2.15 6.45-.15.2-.37.3-.6.3a.75.75 0 0 1-.6-1.2A9.17 9.17 0 0 0 21 11.75c0-2.02-.64-3.94-1.85-5.55a.75.75 0 0 1 1.2-.9zM4.2 5.15c.33.25.4.72.15 1.05a9.17 9.17 0 0 0-1.85 5.55c0 2.02.64 3.94 1.85 5.55a.75.75 0 0 1-1.2.9C1.74 16.33 1 14.1 1 11.75c0-2.35.74-4.58 2.15-6.45a.75.75 0 0 1 1.05-.15zm3.2 2.4c.33.25.4.72.15 1.05-.69.91-1.05 2-1.05 3.15s.36 2.24 1.05 3.15a.75.75 0 0 1-1.2.9A6.73 6.73 0 0 1 5 11.75c0-1.47.47-2.88 1.35-4.05a.75.75 0 0 1 1.05-.15zm9.751.15a6.73 6.73 0 0 1 1.35 4.05c0 1.47-.47 2.88-1.35 4.05-.15.2-.37.3-.6.3a.75.75 0 0 1-.6-1.2c.69-.91 1.05-2 1.05-3.15s-.36-2.24-1.05-3.15a.75.75 0 0 1 1.2-.9zM11.75 9c1.52 0 2.75 1.23 2.75 2.75s-1.23 2.75-2.75 2.75S9 13.27 9 11.75 10.23 9 11.75 9zm0 1.5a1.25 1.25 0 1 0 0 2.501 1.25 1.25 0 0 0 0-2.5z" fill="#FFF" fill-rule="evenodd"/>
             </symbol>
             <symbol id="icon-support" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M489.343 210.251c-4.827-105.317-92.01-189.513-198.498-189.513h-69.689c-106.488 0-193.67 84.197-198.498 189.513C9.495 214.747 0 227.228 0 241.894v78.61c0 18.436 15 33.436 33.437 33.436h60.996c6.075 0 11-4.925 11-11V219.458c0-6.075-4.925-11-11-11H44.789c5.699-92.338 82.618-165.72 176.366-165.72h69.689c93.749 0 170.667 73.381 176.366 165.72h-49.644c-6.075 0-11 4.925-11 11V342.94c0 6.075 4.925 11 11 11h60.996c18.436 0 33.436-15 33.436-33.436v-78.61c.002-14.666-9.493-27.147-22.655-31.643zM83.433 331.94H33.437c-6.306 0-11.437-5.13-11.437-11.436v-78.61c0-6.306 5.131-11.436 11.437-11.436h49.996V331.94zM490 320.504c0 6.306-5.131 11.436-11.436 11.436h-49.996V230.458h49.996c6.306 0 11.436 5.13 11.436 11.436v78.61z" style="fill: rgb(51, 204, 204);"></path><path d="M256 491.262a11.001 11.001 0 0 1-8.402-3.9l-52.108-61.671h-74.566c-20.673 0-37.491-16.818-37.491-37.49V188.049c0-20.673 16.818-37.491 37.491-37.491h270.154c20.672 0 37.49 16.818 37.49 37.491V388.2c0 20.672-16.818 37.49-37.49 37.49h-74.566l-52.108 61.671a11.006 11.006 0 0 1-8.404 3.901zM120.923 172.558c-8.542 0-15.491 6.949-15.491 15.491V388.2c0 8.541 6.949 15.49 15.491 15.49h79.673c3.238 0 6.312 1.427 8.402 3.9L256 463.218l47.002-55.627a10.998 10.998 0 0 1 8.402-3.9h79.673c8.541 0 15.49-6.949 15.49-15.49V188.049c0-8.542-6.949-15.491-15.49-15.491H120.923z"></path><path d="M193.81 259.09c-8.663.084-14.039-9.956-9.139-17.11 4.134-6.475 14.16-6.434 18.29 0 4.892 7.164-.483 17.196-9.151 17.11zM311.729 259.09c-7.629.166-13.258-8.219-10.16-15.21 3.614-8.972 16.705-8.978 20.31 0 3.113 6.979-2.526 15.376-10.15 15.21zM256 352.204c-25.31 0-50.619-10.009-73.192-30.028-4.545-4.03-4.962-10.982-.931-15.528 4.029-4.545 10.982-4.962 15.528-.931 36.689 32.536 80.501 32.538 117.19 0 4.547-4.031 11.497-3.614 15.528.931 4.031 4.546 3.614 11.498-.931 15.528-22.572 20.019-47.882 30.028-73.192 30.028z"></path></symbol>
-
         </defs>
     </svg>
 
+    <script type="text/javascript" src="../js/app.js"></script>
 </body>
 </html>

@@ -28,7 +28,6 @@
     --transition-4: all .25s cubic-bezier(.645,.045,.355,1);
     --radius:10px;
     --shadow-1: 0px 6px 34px rgba(215, 216, 222, 0.41);
-
 }
 
 body{
