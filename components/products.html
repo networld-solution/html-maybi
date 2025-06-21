@@ -1,11 +1,336 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>products</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sản phẩm thời trang nữ | Maybi</title>
+  <meta name="description" content="Khám phá các sản phẩm thời trang nữ phong cách, chất lượng cao từ Maybi. Ưu đãi hấp dẫn và giao hàng nhanh chóng." />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/default.css" />
+  <link rel="stylesheet" href="../css/icons.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/reponsive.css" />
+  <link rel="stylesheet" href="../css/maybi-ui.css" />
+  <link rel="stylesheet" href="../css/product.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" />
 </head>
+
 <body>
-    
+  <!-- Modal xem nhanh sản phẩm -->
+  <div class="modal__overlay" id="modal-product-1" data-modal role="dialog" aria-label="Xem nhanh sản phẩm Cozy Knit Cardigan Sweater">
+    <div class="modal modal__product">
+      <button onclick="maybiUI.closeModal('modal-product-1')" class="modal__close" aria-label="Đóng">
+        <span class="mdi mdi-close"></span>
+      </button>
+
+      <div class="modal__body">
+        <div class="row">
+          <div class="col-6">
+            <div class="modal__product__image">
+              <div class="swiper product__image__swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img class="img-cover" src="../img/product1.png" alt="Cozy Knit Cardigan Sweater - Hình 1" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="img-cover" src="../img/product2.png" alt="Cozy Knit Cardigan Sweater - Hình 2" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="img-cover" src="../img/product3.png" alt="Cozy Knit Cardigan Sweater - Hình 2" />
+                  </div>
+                </div>
+                <div class="swiper-pagination swp-main-pagination"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <h2 class="modal__product__name mb-3">Cozy Knit Cardigan Sweater</h2>
+            <div class="row mb-3">
+                <div class="col-12">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has.</p>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-6">
+                    <p>Giá</p>
+                    <span class="price">$125.75 <del>$132.17</del></span>
+                </div>
+                <div class="col-6">
+                    <p>Số lượng</p>
+                    <span class="price">10</span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-6">
+                    <button class="btn-secondary">Add to card</button>
+                </div>
+                <div class="col-6">
+                    <button class="btn-secondary">Add To Wishlist</button>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12 mb-3">
+                    <p><strong>SKU:</strong>12334566</p>
+                </div>
+                <div class="col-12 mb-3">
+                    <p><strong>Category:</strong> Dresses, Jeans, Swimwear, Summer, Clothing</p>
+                </div>
+                <div class="col-12 mb-3">
+                    <p><strong>Tags:</strong> Dresses, Jeans, Swimwear, Summer, Clothing</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nội dung chính -->
+  <main>
+    <section class="product" aria-label="Danh sách sản phẩm">
+      <div class="product__container">
+        <div class="product-grid">
+       
+          <article class="product-card" itemscope itemtype="https://schema.org/Product">
+            <div class="product-card__top">
+              <figure class="product__images">
+                <img id="product-1" src="../img/product1.png" class="img-cover img-product" alt="Ảnh chính sản phẩm 1" itemprop="image" />
+                <img src="../img/product3.png" class="img--hover img-cover" alt="Ảnh phụ sản phẩm 1" itemprop="image" />
+                
+              </figure>
+              <div class="product-card__icons">
+                <a class="product-card__icon" href="javascript:void(0)" aria-label="Thêm vào yêu thích"><span class="mdi mdi-heart-outline"></span></a>
+                <a class="product-card__icon" href="javascript:void(0)" aria-label="Thêm vào giỏ hàng"><span class="mdi mdi-cart-outline"></span></a>
+              </div>
+              <div class="product-card__button">
+                <button class="btn-secondary btn__quickview" onclick="maybiUI.openModal('modal-product-1')" aria-label="Xem nhanh sản phẩm">Xem nhanh</button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title" itemprop="name">Tên sản phẩm: Sản phẩm 1</h3>
+              <p class="product-card__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                Giá bán: <span itemprop="price">₫250.000</span>
+              </p>
+              <div class="product-card__color">
+                <div class="product-card__color">
+                    <ul class="color__list" aria-label="Lựa chọn màu">
+                        <li class="color__item">
+                            <a href="javascript:void(0)" style="background-color: red;" data-id="product-1" data-img="../img/product1.png" class="color__link" aria-label="red"></a>
+                        </li>
+                        <li class="color__item">
+                            <a href="javascript:void(0)" style="background-color: green;" data-id="product-1" data-img="../img/product2.png" class="color__link" aria-label="green"></a>
+                        </li>
+
+                        <li class="color__item">
+                            <a href="javascript:void(0)" style="background-color: yellow;" data-id="product-1" data-img="../img/product3.png" class="color__link" aria-label="yellow"></a>
+                        </li>
+                    
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" itemscope itemtype="https://schema.org/Product">
+            <div class="product-card__top">
+              <figure class="product__images">
+                <img id="product-2" src="../img/product2.png" class="img-cover img-product" alt="Ảnh chính sản phẩm 1" itemprop="image" />
+                <img src="../img/product4.png" class="img--hover img-cover" alt="Ảnh phụ sản phẩm 1" itemprop="image" />
+                
+              </figure>
+              <div class="product-card__icons">
+                <a class="product-card__icon" href="javascript:void(0)" aria-label="Thêm vào yêu thích"><span class="mdi mdi-heart-outline"></span></a>
+                <a class="product-card__icon" href="javascript:void(0)" aria-label="Thêm vào giỏ hàng"><span class="mdi mdi-cart-outline"></span></a>
+              </div>
+              <div class="product-card__button">
+                <button class="btn-secondary btn__quickview" onclick="maybiUI.openModal('modal-product-1')" aria-label="Xem nhanh sản phẩm">Xem nhanh</button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title" itemprop="name">Tên sản phẩm: Sản phẩm 1</h3>
+              <p class="product-card__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                Giá bán: <span itemprop="price">₫250.000</span>
+              </p>
+              <div class="product-card__color">
+                <div class="product-card__color">
+                    <ul class="color__list" aria-label="Lựa chọn màu">
+                        <li class="color__item">
+                            <a href="javascript:void(0)" style="background-color: red;" data-id="product-2" data-img="../img/product2.png" class="color__link" aria-label="red"></a>
+                        </li>
+                        <li class="color__item">
+                            <a href="javascript:void(0)" style="background-color: green;" data-id="product-2" data-img="../img/product3.png" class="color__link" aria-label="green"></a>
+                        </li>
+
+                        <li class="color__item">
+                            <a href="javascript:void(0)" style="background-color: yellow;" data-id="product-2" data-img="../img/product4.png" class="color__link" aria-label="yellow"></a>
+                        </li>
+                    
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" itemscope itemtype="https://schema.org/Product">
+            <div class="product-card__top">
+              <figure class="product__images">
+                <img id="product-3" src="../img/product2.png" class="img-cover img-product" alt="Ảnh chính sản phẩm 1" itemprop="image" />
+                <img src="../img/product4.png" class="img--hover img-cover" alt="Ảnh phụ sản phẩm 1" itemprop="image" />
+                
+              </figure>
+              <div class="product-card__icons">
+                <a class="product-card__icon" href="javascript:void(0)" aria-label="Thêm vào yêu thích"><span class="mdi mdi-heart-outline"></span></a>
+                <a class="product-card__icon" href="javascript:void(0)" aria-label="Thêm vào giỏ hàng"><span class="mdi mdi-cart-outline"></span></a>
+              </div>
+              <div class="product-card__button">
+                <button class="btn-secondary btn__quickview" onclick="maybiUI.openModal('modal-product-1')" aria-label="Xem nhanh sản phẩm">Xem nhanh</button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title" itemprop="name">Tên sản phẩm: Sản phẩm 1</h3>
+              <p class="product-card__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                Giá bán: <span itemprop="price">₫250.000</span>
+              </p>
+              <div class="product-card__color">
+                <div class="product-card__color">
+                    <ul class="color__list" aria-label="Lựa chọn màu">
+                        <li class="color__item">
+                            <a href="javascript:void(0)" style="background-color: red;" data-id="product-3" data-img="../img/product2.png" class="color__link" aria-label="red"></a>
+                        </li>
+                        <li class="color__item">
+                            <a href="javascript:void(0)" style="background-color: green;" data-id="product-3" data-img="../img/product3.png" class="color__link" aria-label="green"></a>
+                        </li>
+
+                        <li class="color__item">
+                            <a href="javascript:void(0)" style="background-color: yellow;" data-id="product-3" data-img="../img/product4.png" class="color__link" aria-label="yellow"></a>
+                        </li>
+                    
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+
+          <article class="product-card" itemscope itemtype="https://schema.org/Product">
+            <div class="product-card__top">
+              <figure class="product__images">
+                <img id="product-4" src="../img/product2.png" class="img-cover img-product" alt="Ảnh chính sản phẩm 1" itemprop="image" />
+                <img src="../img/product4.png" class="img--hover img-cover" alt="Ảnh phụ sản phẩm 1" itemprop="image" />
+                
+              </figure>
+              <div class="product-card__icons">
+                <a class="product-card__icon" href="javascript:void(0)" aria-label="Thêm vào yêu thích"><span class="mdi mdi-heart-outline"></span></a>
+                <a class="product-card__icon" href="javascript:void(0)" aria-label="Thêm vào giỏ hàng"><span class="mdi mdi-cart-outline"></span></a>
+              </div>
+              <div class="product-card__button">
+                <button class="btn-secondary btn__quickview" onclick="maybiUI.openModal('modal-product-1')" aria-label="Xem nhanh sản phẩm">Xem nhanh</button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title" itemprop="name">Tên sản phẩm: Sản phẩm 1</h3>
+              <p class="product-card__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                Giá bán: <span itemprop="price">₫250.000</span>
+              </p>
+              <div class="product-card__color">
+                <div class="product-card__color">
+                    <ul class="color__list" aria-label="Lựa chọn màu">
+                        <li class="color__item">
+                            <a href="javascript:void(0)" style="background-color: red;" data-id="product-4" data-img="../img/product2.png" class="color__link" aria-label="red"></a>
+                        </li>
+                        <li class="color__item">
+                            <a href="javascript:void(0)" style="background-color: green;" data-id="product-4" data-img="../img/product3.png" class="color__link" aria-label="green"></a>
+                        </li>
+
+                        <li class="color__item">
+                            <a href="javascript:void(0)" style="background-color: yellow;" data-id="product-4" data-img="../img/product4.png" class="color__link" aria-label="yellow"></a>
+                        </li>
+                    
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+
+          <article class="product-card" itemscope itemtype="https://schema.org/Product">
+            <div class="product-card__top">
+              <figure class="product__images">
+                <img id="product-5" src="../img/product2.png" class="img-cover img-product" alt="Ảnh chính sản phẩm 1" itemprop="image" />
+                <img src="../img/product4.png" class="img--hover img-cover" alt="Ảnh phụ sản phẩm 1" itemprop="image" />
+                
+              </figure>
+              <div class="product-card__icons">
+                <a class="product-card__icon" href="javascript:void(0)" aria-label="Thêm vào yêu thích"><span class="mdi mdi-heart-outline"></span></a>
+                <a class="product-card__icon" href="javascript:void(0)" aria-label="Thêm vào giỏ hàng"><span class="mdi mdi-cart-outline"></span></a>
+              </div>
+              <div class="product-card__button">
+                <button class="btn-secondary btn__quickview" onclick="maybiUI.openModal('modal-product-1')" aria-label="Xem nhanh sản phẩm">Xem nhanh</button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title" itemprop="name">Tên sản phẩm: Sản phẩm 1</h3>
+              <p class="product-card__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                Giá bán: <span itemprop="price">₫250.000</span>
+              </p>
+              <div class="product-card__color">
+                <div class="product-card__color">
+                    <ul class="color__list" aria-label="Lựa chọn màu">
+                        <li class="color__item">
+                            <a href="javascript:void(0)" style="background-color: red;" data-id="product-5" data-img="../img/product2.png" class="color__link" aria-label="red"></a>
+                        </li>
+                        <li class="color__item">
+                            <a href="javascript:void(0)" style="background-color: green;" data-id="product-5" data-img="../img/product3.png" class="color__link" aria-label="green"></a>
+                        </li>
+
+                        <li class="color__item">
+                            <a href="javascript:void(0)" style="background-color: yellow;" data-id="product-5" data-img="../img/product4.png" class="color__link" aria-label="yellow"></a>
+                        </li>
+                    
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+         
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="../js/maybi-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".product__image__swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+
+    let colorLinks = document.querySelectorAll('.color__link');
+    colorLinks.forEach((colorLink) => {
+        colorLink.addEventListener('mouseover', (el) => {
+            let img = el.currentTarget.getAttribute('data-img');
+            let productId = el.currentTarget.getAttribute('data-id');
+            let imgProduct = document.getElementById(productId);
+            if(imgProduct == null) return;
+            imgProduct.setAttribute('src', img);
+
+        });
+
+        colorLink.addEventListener('mouseout', (el) => {
+          
+        });
+       
+    });
+  </script>
 </body>
 </html>

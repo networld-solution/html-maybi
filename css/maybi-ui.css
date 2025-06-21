@@ -1,0 +1,242 @@
+
+/* --------------------------------------
+   Responsive Design Tokens - Maybi UI
+   Viewport base: 1920px
+--------------------------------------- */
+
+:root {
+  /* --- Spacing (px -> vw) --- */
+  --vw-1: 0.052vw;    /* 1px = 0.052vw */
+  --vw-2: 0.104vw;    /* 2px = 0.104vw */
+  --vw-4: 0.208vw;    /* 4px = 0.208vw */
+  --vw-6: 0.313vw;    /* 6px = 0.313vw */
+  --vw-8: 0.417vw;    /* 8px = 0.417vw */
+  --vw-10: 0.52vw;    /* 10px = 0.520vw */
+  --vw-12: 0.625vw;   /* 12px = 0.625vw */
+  --vw-14: 0.729vw;   /* 14px = 0.729vw */
+  --vw-16: 0.833vw;   /* 16px = 0.833vw */
+  --vw-18: 0.938vw;   /* 18px = 0.938vw */
+  --vw-20: 1.042vw;   /* 20px = 1.042vw */
+  --vw-24: 1.25vw;    /* 24px = 1.250vw */
+  --vw-28: 1.458vw;   /* 28px = 1.458vw */
+  --vw-30: 1.563vw;   /* 30px = 1.563vw */
+  --vw-32: 1.667vw;   /* 32px = 1.667vw */
+  --vw-36: 1.875vw;   /* 36px = 1.875vw */
+  --vw-40: 2.083vw;   /* 40px = 2.083vw */
+  --vw-48: 2.5vw;     /* 48px = 2.500vw */
+  --vw-50: 2.604vw;   /* 50px = 2.604vw */
+  --vw-56: 2.917vw;   /* 56px = 2.917vw */
+  --vw-60: 3.125vw;   /* 60px = 3.125vw */
+  --vw-64: 3.333vw;   /* 64px = 3.333vw */
+
+  /* --- Container & Layout Widths --- */
+  --vw-100: 5.208vw;     /* 100px = 5.208vw */
+  --vw-150: 7.813vw;     /* 150px = 7.813vw */
+  --vw-200: 10.417vw;    /* 200px = 10.417vw */
+  --vw-250: 13.021vw;    /* 250px = 13.021vw */
+  --vw-300: 15.625vw;    /* 300px = 15.625vw */
+  --vw-400: 20.833vw;    /* 400px = 20.833vw */
+  --vw-500: 26.042vw;    /* 500px = 26.042vw */
+  --vw-520: 27.083vw;    /* 520px = 27.083vw */
+  --vw-640: 33.333vw;    /* 640px = 33.333vw */
+  --vw-720: 37.5vw;      /* 720px = 37.500vw */
+  --vw-768: 40vw;        /* 768px = 40.000vw */
+  --vw-960: 50vw;        /* 960px = 50.000vw */
+  --vw-1024: 53.333vw;   /* 1024px = 53.333vw */
+  --vw-1070: 55.729vw;   /* 1070px = 55.729vw */
+  --vw-1140: 59.375vw;   /* 1140px = 59.375vw */
+  --vw-1280: 66.667vw;   /* 1280px = 66.667vw */
+  --vw-1440: 75vw;       /* 1440px = 75.000vw */
+  --vw-1600: 83.333vw;   /* 1600px = 83.333vw */
+  --vw-1920: 100vw;      /* 1920px = 100.000vw */
+
+  /* --- Font Sizes --- */
+  --font-xs: var(--vw-10);    /* 10px */
+  --font-sm: var(--vw-12);    /* 12px */
+  --font-md: var(--vw-14);    /* 14px */
+  --font-base: var(--vw-16);  /* 16px */
+  --font-lg: var(--vw-18);    /* 18px */
+  --font-xl: var(--vw-24);    /* 24px */
+  --font-2xl: var(--vw-30);   /* 30px */
+
+  /* --- Radius --- */
+  --radius-xs: var(--vw-4);   /* 4px */
+  --radius-sm: var(--vw-8);   /* 8px */
+  --radius-md: var(--vw-12);  /* 12px */
+  --radius-lg: var(--vw-20);  /* 20px */
+  --radius-xl: var(--vw-30);  /* 30px */
+
+  /* --- Transition & Border --- */
+  --border-thin: 0.052vw;     /* 1px */
+  --border-default: 0.104vw;  /* 2px */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-smooth: 0.5s ease-in-out;
+
+  /* --- Responsive Clamp Example --- */
+  --clamp-title: clamp(1.2rem, 2vw, 2.4rem);
+  --clamp-subtitle: clamp(1rem, 1.5vw, 2rem);
+  --clamp-text: clamp(0.875rem, 1vw, 1.25rem);
+}
+
+/* Example usage:
+  font-size: var(--font-base);
+  padding: var(--vw-12) var(--vw-24);
+  border-radius: var(--radius-md);
+*/
+
+
+/* Refactored CSS using vw-based design tokens from :root */
+
+
+
+
+/* Alert */
+.alert {
+  position: fixed;
+  bottom: var(--vw-24);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: var(--vw-16) var(--vw-20);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 var(--vw-4) var(--vw-12) rgba(0,0,0,0.2);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1100;
+  min-width: var(--vw-250);
+}
+
+.alert__message {
+  font-size: var(--font-base);
+  color: #333;
+  margin-bottom: var(--vw-10);
+}
+
+.alert__close {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Dialog */
+.dialog__overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: var(--vw-16);
+  z-index: 1000;
+}
+
+.dialog {
+  background: #fff;
+  border-radius: var(--radius-sm);
+  padding: var(--vw-24);
+  max-width: var(--vw-400);
+  width: 100%;
+  box-shadow: 0 var(--vw-8) var(--vw-16) rgba(0,0,0,0.25);
+  position: relative;
+}
+
+.dialog__title {
+  font-size: var(--font-lg);
+  font-weight: bold;
+  margin-bottom: var(--vw-16);
+}
+
+.dialog__content {
+  font-size: var(--font-base);
+  margin-bottom: var(--vw-20);
+}
+
+.dialog__actions {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--vw-10);
+}
+
+.dialog__close {
+  position: absolute;
+  top: var(--vw-10);
+  right: var(--vw-10);
+  font-size: var(--font-lg);
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+}
+
+.dialog__close:hover {
+  color: var(--primary-color);
+}
+
+.modal__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: var(--vw-16);
+}
+
+.modal__overlay.is-open {
+  display: flex;
+}
+
+.modal {
+  background: #fff;
+  border-radius: var(--radius-sm);
+  width: 100%;
+  box-shadow: 0 var(--vw-8) var(--vw-16) rgba(0,0,0,0.25);
+  position: relative;
+  padding: var(--vw-24);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal__header {
+  margin-bottom: var(--vw-16);
+}
+
+.modal__title {
+  font-size: var(--font-lg);
+  font-weight: bold;
+}
+
+.modal__body {
+  font-size: var(--font-base);
+  margin-bottom: var(--vw-24);
+}
+
+.modal__footer {
+  text-align: right;
+}
+
+.modal__close {
+  position: absolute;
+  top: var(--vw-14);
+  right: var(--vw-14);
+  background: none;
+  border: none;
+  font-size: var(--font-lg);
+  cursor: pointer;
+  color: #666;
+}
+
+.modal__close:hover {
+  color: var(--primary-color);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}

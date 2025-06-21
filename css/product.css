@@ -1,0 +1,334 @@
+
+.img-cover {
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+.img-contain {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.product__container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2vw 0;
+}
+
+.product__container { 
+    font-size: 0.729vw;
+    margin-bottom: var(--vw-14);
+}
+
+
+
+.product-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, var(--vw-300));
+  gap: var(--vw-24);
+}
+
+
+.product-card {
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease;
+    position: relative;
+    width: var(--vw-300);   
+}
+
+
+
+.product-card .product__images {
+    position: relative;
+    width: var(--vw-300);   
+    height: var(--vw-400);
+    overflow: hidden;
+}
+.product__images > img {
+    position: absolute;
+    left: 0; 
+    top: 0;
+    transition: opacity 500ms ease-in-out;
+  
+}
+
+.product__images > .img--hover {
+   
+    transition: opacity 500ms ease-in-out;
+    opacity: 0;
+    
+}
+
+
+.product-card .product__images:hover >.img--hover {
+    opacity: 1;
+    z-index: 2;
+    transition: opacity 500ms ease-in-out;
+}
+.product-card .product__images >.img--active {
+    opacity: 1;
+    z-index: 1;
+    transition: opacity 500ms ease-in-out;
+}
+
+
+.product-card:hover .product-card__icon {
+    opacity: 1;
+    transform: translateX(0);
+
+}
+.product-card__icons {
+    font-size: 1.667vw;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: transparent;
+    right: .5em;
+    top: 0;
+    z-index: 10;
+    
+   
+}
+
+.product-card__icon:nth-child(1) { transition-delay: 0s; }
+.product-card__icon:nth-child(2) { transition-delay: 0.1s; }
+
+.product-card__icon {
+    width: 1.667vw;
+    height: 1.667vw;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+
+/* .product-card:hover {
+    transform: scale(1.02);
+} */
+
+
+.product-card__top {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card__button {
+    opacity: 0;
+    transform: translateY(0);
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+   
+}
+
+
+.product-card:hover .product-card__button {
+  opacity: 1;
+  transform: translateY(-2.604vw);
+  
+}
+
+
+.product-card:hover .product-card__image.product-card__image--hover{
+    display: block;
+    
+}
+
+.product-card:hover .product-card__image{
+    display: none;
+    
+}
+
+.product-card__image--hover {
+    display: none;
+}
+
+.product-card__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition-duration: 700ms;
+}
+
+.product-card__body {
+    padding: var(--vw-16);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    height: var(--vw-150);
+    width: 100%;
+}
+
+.product-card__title {
+    font-size: var(--vw-20);
+    font-weight: 600;
+    margin-bottom: var(--vw-10);
+}
+
+p.product-card__price {
+    font-size: var(--vw-16);
+    font-weight: 500;
+    margin-bottom: var(--vw-12);
+}
+ .product-card__price span{
+    font-size: var(--vw-16);
+    font-weight: 500;
+ }
+
+
+.product-card__color .color__list {
+    display: flex;
+    gap: 0.5vw;
+    margin-bottom: 0.5vw;
+}
+
+.product-card__color .color__item {
+    width: 1.5vw;
+    height: 1.5vw;
+    padding: var(--vw-4);
+    border-radius: 50%;
+    border: var(--vw-1) solid #000;
+    cursor: pointer;
+}
+
+.color__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #000;
+    cursor: pointer;
+}
+
+
+.product-card__color .color__item--active {
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 50%;
+    border: 0.3vw solid #000;           
+}
+ 
+
+.btn-secondary {
+    font-size: var(--vw-16);
+    padding: var(--vw-12) var(--vw-30);
+    line-height: var(--vw-24);
+    display: inline-flex;
+    font-weight: 500;
+    position: relative;
+    text-transform: capitalize;
+    font-family: Lufga, sans-serif;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+    text-align: center;
+    transition: all .2s;
+    justify-content: center;
+    border: none;
+    border-radius: var(--vw-10);
+    line-height: 1.2;
+    background-color: black;
+    color: #fff;
+}
+
+
+
+.btn-secondary:hover:after {
+    opacity: 0;
+    transform: translate(0);
+}
+
+.btn-secondary:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all .5s;
+    opacity: .8;
+    transform: translate(-105%);
+    border-right: var(--vw-2) solid rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.modal.modal__product {
+    width: var(--vw-1024);
+}
+
+.modal__product__name {
+    font-size: var(--vw-24);
+}
+
+.modal__product__image {
+    max-width: var(--vw-520);
+    max-height: var(--vw-520);
+    overflow: hidden;
+}
+
+
+
+
+
+
+/* Mobile: 1 item trên mỗi hàng */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    justify-content: center; /* hoặc stretch nếu muốn full width */
+  }
+
+  .product-card {
+    width: 100%; /* hoặc max-width: 90vw nếu cần */
+    margin: 0 auto;
+  }
+
+  .product-card .product__images {
+        width: 300px;
+        min-height: 400px;
+    }
+
+    .product-card .product-card__body {
+        width: 300px;
+        height: 150px;
+    }
+
+    .product-card__title {
+    font-size: 1vw;
+    font-weight: 600;
+    margin-bottom: 0.5vw;
+}
+
+.product-card__price {
+    font-size: var(--vw-16);
+    font-weight: 500;
+}
+
+
+.product-card__color .color__list {
+    display: flex;
+    gap: 0.5vw;
+    margin-bottom: 0.5vw;
+}
+
+.product-card__color .color__item {
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+}

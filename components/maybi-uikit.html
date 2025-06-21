@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maybi UI Demo</title>
+    <link rel="stylesheet" href="../css/maybi-ui.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <h2>Demo Maybi UI</h2>
+    <button class="button" id="openDialogBtn">Mở Dialog</button>
+     <a class="button-secondary" onclick="maybiUI.openModal('modal-example')">add to cart</a>
+
+    <!-- Custom Alert -->
+    <div class="alert" id="customAlert">
+        <div class="alert__message" id="alertMessage">Thông báo</div>
+        <button class="alert__close button" id="alertClose">Đóng</button>
+    </div>
+
+
+
+    <div class="modal__overlay" id="modal-example" data-modal>
+        <div class="modal">
+            <button class="modal__close" data-modal-close>&times;</button>
+            <div class="modal__header">
+                <h3 class="modal__title">Thông báo</h3>
+            </div>
+            <div class="modal__body">
+                <p>Đây là nội dung modal được khai báo trong HTML.</p>
+            </div>
+            <div class="modal__footer">
+                <button class="button" onclick="maybiUI.closeModal('modal-example')">Đóng</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/maybi-ui.js"></script>
+    <script>
+        maybiUI.init();
+        document.getElementById('openDialogBtn').addEventListener('click', () => {
+            maybiUI.createDialog({
+                title: 'Xác nhận xóa',
+                content: 'Bạn có chắc chắn muốn xóa dữ liệu này không?',
+                confirmText: 'Xóa',
+                cancelText: 'Hủy',
+                closable: true,
+                onConfirm: () => maybiUI.showAlert('Đã xóa thành công!')
+            });
+        });
+    </script>
+</body>
+
+</html>
